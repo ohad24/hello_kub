@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello_kub
+  namespace: hello_kub
+spec:
+  type: NodePort
+  ports:
+  - name: "hello-kub-service"
+    port: 5000
+    targetPort: 5000
+    nodePort: 31000
+  selector:
+    app: hello_kub
+

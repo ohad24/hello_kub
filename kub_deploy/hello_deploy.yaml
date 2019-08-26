@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello_kub
+  namespace: hello_kub
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hello_kub
+    spec:
+      containers:
+      - image: ohad24/hello_kub_img:latest
+        name: hello_kub
