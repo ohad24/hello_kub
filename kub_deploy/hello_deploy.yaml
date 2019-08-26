@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: hello_kub
-  namespace: hello_kub
+  namespace: hello-kub
 spec:
   replicas: 3
   template:
